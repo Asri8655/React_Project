@@ -1,0 +1,354 @@
+.App {
+  text-align: center;
+  
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 225px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#4e73df;
+  overflow-x: hidden;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  color:#FFF;
+  display: block;
+ 
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.dashcolor{
+  color: #5a5c69!important;
+  margin-left: 15px;
+  
+}
+.admin{
+  font-size: 18px;
+  color:#FFFFFF;
+  font-family: "Nunito,-apple-system,BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  margin: 0px16px;
+  margin-left: 23px;
+  font-weight: 500;
+  height: 2.375rem;
+}
+.hrcolor{
+  -webkit-tap-highlight-color: transparent;
+}
+.Lable{
+  color: #FFFFFFCC;
+  margin-left: 20px;
+}
+.Lable:hover{
+  color:#FFF;
+}
+.arrowallig{
+margin-left: 50px;
+}
+.hrr{
+  margin-left: 5px;
+  color:rgba(255,255,255,.15);
+}
+.hrr1{
+  margin-left: 10px;
+  color:#FFFFFF66;
+  font-size: 13px;
+ 
+}
+.navv{
+  margin-left: 226px;
+  
+}
+.size{
+  margin-right: 623px;
+}
+.alert{
+  margin-right: 100px;
+}
+.Dashhead{
+  
+  margin-left: 224px;
+  margin-right: 188px;
+}
+
+
+.table-responsive{
+  width: 82%!important;
+  margin-left: 257px;
+}
+.report{
+  margin-right: -176px;
+}
+.prog{
+  width: 50%;
+   /* aria-valuenow="50";
+    aria-valuemin="0";
+                                                            aria-valuemax="100"; */
+}
+.leftcolor1{
+  border-left: .25rem solid #4e73df!important;
+  width: 270px; 
+}
+.leftcolor2{
+  border-left: .25rem solid #1cc88a!important;
+  width: 270px;
+}
+.leftcolor3{
+  border-left: .25rem solid #36b9cc!important;
+  width: 270px;
+}
+.leftcolor4{
+  border-left: .25rem solid #f6c23e!important;
+  width: 270px;
+}
+.rowsize{
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -235px;
+    margin-left: 15px;
+}
+.charts{
+  margin-left: 230px;
+}
+.Roww{
+  width: 75%!important;
+} 
+span:visited{
+  color:red;
+  }
+  .roww{
+    
+  margin-left: 254px;
+  margin-right: -2px;
+  }
+  .graph{
+    margin-left: 254px;
+    margin-right: 24px;
+
+  }
+  .style{
+    width: "100%";
+  }
+  .Server{
+    width: 20%;
+     
+  }
+  .Server2{
+    
+    width: 40%;
+     
+  }
+  .Server3{
+    
+    width: 60%;
+  
+  }
+  .Server4{
+    
+    width: 80%;
+     
+  }
+  .Server5{
+    
+    width: 100%;
+     
+  }
+  .pro{
+    text-align: left;
+  }
+ .pro1{
+  text-align: left;
+ }
+ .image{
+  width: 25rem;
+ }
+ .colorcode{
+  margin-left: 240px;
+ }
+ .iconcolor{
+  color: #dddfeb!important;
+ }
+ .textsize{
+  font-size: .7rem;
+  text-align: left;
+ }
+ .textsize1{
+  text-align: left;
+  color:#5a5c69!important
+ }
+ .illu{
+  text-align: left;
+ }
+ .progress-sm {
+  height: .5rem;
+}
+.copyright {
+  line-height: 1;
+  font-size: .8rem;
+  margin-left: 230px;
+}
+.bottom{
+  margin-left: 1400px;
+}
+brand {
+  height: 4.375rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+.Linkallign{
+  margin-left: -30px;
+}
+.tableheading{
+  margin-left: 225px;
+}
+.Linkallign2{
+  margin-left: -30px;
+  margin-top: 13px;
+  margin-bottom: 11px;
+}
+.fa-laugh-wink:before {
+  content: "\f59c";
+}
+.nav-link .badge-counter {
+  position: absolute;
+  transform: scale(.7);
+  transform-origin: top right;
+  right: 11.5rem !important;
+  margin-top: -.25rem;
+}
+.fa-search:before {
+  content: "\f002";
+}
+.rightarrow{
+  padding-left: 67px;
+}
+.rightarrow2{
+  padding-left: 90px;
+}
+.rightarrow3{
+  padding-left: 105px;
+}
+.container{
+  margin-top: 139px;
+}
+.blue{
+  background-color: #4e73df;
+}
+.colorhead {
+  color: white;
+}
+
+
+#fb-button {
+  background-color: #3b5998;
+  color: white;
+  border-radius: 25px;
+}
+
+
+element.style {
+  width: 1373px;
+}
+.justify-content-center {
+  justify-content: center!important;
+}
+.row{
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+}
+.fp{
+  border-radius: 25px;
+}
+
+.hi{
+  background-color: #3b5998;
+  color: white;
+}
+.my-5 {
+  margin-top: -5rem!important;
+}
+.imageSize{
+  width: 475px;
+  height: 585px;
+}
+.imageSize1{
+  width: 475px;
+  height: 858px;
+}
+.imageSize3{
+  width: 475px;
+  height: 417.8px;
+}
+.imageSize4{
+  width: 532px;
+  height: 571px;
+}
+.imageSize5{
+  width: 532px;
+  height: 571px;
+}
+.forgot{
+ 
+ background-color: rgb(230, 243, 251);
+ 
+height: 800px;
+overflow: hidden;
+}
+.reports{
+  
+  width: 186px;
+ background-color:#007bff !important;
+}
+.note{
+  font-size: 75%;
+  margin-left: 20px !important;
+}

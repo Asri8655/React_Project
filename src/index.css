@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.form-control{
+  height: calc(1.5em + .75rem + 2px)!important;
+}
+/* .btn{
+  height: calc(1.5em + 1.75rem + 2px)!important;
+  text-align: center;
+  padding-top: 10px !important;
+  line-height: 2;
+} */
+.searchbtn{
+  line-height: 1 !important;
+  border-radius: 0px !important;
+  background-color: #007bff !important;
+  width: 50px !important;
+  border-color: #007bff;
+}
+.container {
+  margin-top: -1px !important;
+}
+.forgottop{
+  margin-top: 80px;
+  width: 1267px;
+}
+.nav-link .badge-counter {
+  position: absolute;
+  transform: scale(.7);
+  transform-origin: top right;
+  right: 11rem !important;
+  margin-top: -.25rem;
+}
+.ava{
+  margin-right: -60px;
+    height: 30px;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid; 
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+.dropin{
+  width: 539px  !important;
+  border-radius: 25px !important;
+}
+.question2{
+  width: 390px !important;
+}
+.btn-primary {
+  color: #fff;
+  background-color: gray !important;
+  border-color: gray !important;
+  width: 539px;
+  border-radius: 25px  !important;
+}
+.btn-user {
+  font-size: .8rem !important;
+  border-radius: 18rem !important;
+  padding: .75rem 1rem  !important;
+  background-color: #007bff  !important;
+  color: white !important;
+}
+.questionresult{
+  color: red;
+  margin-left: 10px !important;
+}
+.passwordresult{
+  color: red;
+  margin-left: 20px !important;
+}
