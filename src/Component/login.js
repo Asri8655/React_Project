@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable no-debugger */
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -11,11 +12,13 @@ class Login extends React.Component {
     super(props)
     this.state = {
       mail: '',
-      password: ''
+      password: '',
+      pwd:''
     }
   }
-
-  // /
+componentDidMount=()=>{
+this.setState({pwd:localStorage.getItem("Password")})
+}
 
   // getAllPosts = () => {
   //   fetch('http://localhost:8080/users/getAllLogin')
@@ -44,37 +47,52 @@ class Login extends React.Component {
 
   handleLogin = (event) => {
     event.preventDefault()
-    const request = {
-      mail: this.state.mail,
-      password: this.state.password
-    }
-
-    fetch('http://localhost:8080/users/UserLogin', {
-      method: 'POST',
-      body: JSON.stringify(request),
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      }
-    })
-      .then((response) => response.text())
-      .then((json) => {
-        /*eslint-disable */
-       console.log(json)
-       if(json=="Valid"){
-         localStorage.setItem('validUser','ValidUser')
-       this.props.history.push("/Dashboard")
-       }else{
-         toast.error("Invalid Username or Password")
-         window.location.reload()
-       }
-          /* eslint-enable */
-      }).catch((error) => {
+    // const request = {
+    //   mail: this.state.mail,
+    //   password: this.state.password
+    // }
+if(this.state.pwd!==null){
+    if (this.state.mail === 'hireAngunathan@gmail.com' && this.state.password === this.state.pwd ) {
+      localStorage.setItem('validUser', 'ValidUser')
       /*eslint-disable */
-        console.log(error)
-       
-         /* eslint-enable */
-      })
+      this.props.history.push('/Dashboard')}
+    else{
+      toast.error('Use hireAngunathan@gmail.com && '+ this.state.pwd)
+    }
+  }else{
+    if (this.state.mail === 'hireAngunathan@gmail.com' && this.state.password === "Demo@123" ) {
+      localStorage.setItem('validUser', 'ValidUser')
+      /*eslint-disable */
+      this.props.history.push('/Dashboard')}
+    else{
+      toast.error('Use hireAngunathan@gmail.com && Demo@123')
+    }
+  }
+    // fetch('http://localhost:8080/users/UserLogin', {
+    //   method: 'POST',
+    //   body: JSON.stringify(request),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Accept: 'application/json'
+    //   }
+    // })
+    //   .then((response) => response.text())
+    //   .then((json) => {
+    //     /*eslint-disable */
+    //    console.log(json)
+    //    if(json=="Valid"){
+    //      localStorage.setItem('validUser','ValidUser')
+    //    this.props.history.push("/Dashboard")
+    //    }else{
+    //      toast.error("Invalid Username or Password")
+    //      window.location.reload()
+    //    }
+    //       /* eslint-enable */
+    //   }).catch((error) => {
+    //   /*eslint-disable */
+    //     console.log(error)
+    //      /* eslint-enable */
+    //   })
   }
 
   render () {

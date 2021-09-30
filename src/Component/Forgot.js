@@ -1,3 +1,4 @@
+/*eslint-disable */
 import 'font-awesome/css/font-awesome.min.css?raw'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
@@ -20,6 +21,13 @@ class Forgot extends React.Component {
   }
 
   handleLogin =(event) => {
+
+
+    if(this.state.mail==='hireAngunathan@gmail.com'){
+       this.props.history.push("/ForgotScreen2");
+       } else {
+         toast.error("Use hireAngunathan@gmail.com")
+       }
     // this.state.det.map(det => {
     //   if (det.mail === (this.state.mail)) {
     //     // this.sendEmail(this.state.mail)
@@ -32,35 +40,35 @@ class Forgot extends React.Component {
     //   }
     //   return true
     // })
-    event.preventDefault()
-    const request = {
-      mail: this.state.mail
-    }
+    // event.preventDefault()
+    // const request = {
+    //   mail: this.state.mail
+    // }
 
-    fetch('http://localhost:8080/users/ForgotPassword', {
-      method: 'POST',
-      body: JSON.stringify(request),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8'
-      }
-    })
-      .then((response) => response.text())
-      .then((json) => {
-      /*eslint-disable */
-      console.log(json)
-     localStorage.setItem('result',json);
-     let res=json
-     if(json!='mail is not valid'){
-     this.props.history.push("/ForgotScreen1");
-     } else {
-       toast.error("E-Mail is Not Valid")
-     }
-          /* eslint-enable */
-      }).catch((error) => {
-      /*eslint-disable */
-        console.log(error)
-         /* eslint-enable */
-      })
+    // fetch('http://localhost:8080/users/ForgotPassword', {
+    //   method: 'POST',
+    //   body: JSON.stringify(request),
+    //   headers: {
+    //     'Content-type': 'application/json; charset=UTF-8'
+    //   }
+    // })
+    //   .then((response) => response.text())
+    //   .then((json) => {
+    //   /*eslint-disable */
+    //   console.log(json)
+    //  localStorage.setItem('result',json);
+    //  let res=json
+    //  if(json!='mail is not valid'){
+    //  this.props.history.push("/ForgotScreen1");
+    //  } else {
+    //    toast.error("E-Mail is Not Valid")
+    //  }
+    //       /* eslint-enable */
+    //   }).catch((error) => {
+    //   /*eslint-disable */
+    //     console.log(error)
+    //      /* eslint-enable */
+    //   })
   }
 
   // sendEmail =(e) => {

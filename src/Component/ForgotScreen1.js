@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable array-callback-return */
+/*eslint-disable */
 import React, { Component } from 'react'
 import { toast } from 'react-toastify'
 

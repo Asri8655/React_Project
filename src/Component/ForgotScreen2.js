@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { Component } from 'react'
 import { toast } from 'react-toastify'
 export default class ForgotScreen2 extends Component {
@@ -32,7 +33,9 @@ validatePassword = (pw1, pw2) => {
   if (pw1.match(passwordformat) && pw2.match(passwordformat)) {
     this.setState({ passwordStatus: '' })
     return true
-  } else {
+  } else if (pw1.length<=0 ||pw2.length<=0 ){
+    toast.warn('Password Required')
+  }else {
     this.setState({ passwordStatus: 'Password is Not a Required Type See Above' })
     return false
   }
@@ -42,7 +45,9 @@ validateEmail = (inputText) => {
   const mailformat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   if (inputText.match(mailformat)) {
     return true
-  } else {
+  } else if (inputText.length<=0){
+    toast.warn('Please Use hireAngunathan@gmail.com!')
+  }else {
     toast.warn('You have entered an invalid email address!')
     return false
   }
@@ -55,27 +60,38 @@ validateEmail = (inputText) => {
           passWord: this.state.cnfmpassWord
         }
         if (this.validateEmail(this.state.mail) && this.validatePassword(this.state.passWord, this.state.cnfmpassWord) && this.matchPassword(this.state.passWord, this.state.cnfmpassWord)) {
-          fetch('http://localhost:8080/users/UpdatePassword', {
-            method: 'PUT',
-            body: JSON.stringify(request),
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8'
-            }
-          })
-            .then((response) => response.text())
-            .then((json) => {
-            /*eslint-disable */
-          console.log(json)
-          if(json=='true'){
-              toast.success("Password Updated Successfully")
-          }
+          // fetch('http://localhost:8080/users/UpdatePassword', {
+          //   method: 'PUT',
+          //   body: JSON.stringify(request),
+          //   headers: {
+          //     'Content-type': 'application/json; charset=UTF-8'
+          //   }
+          // })
+          //   .then((response) => response.text())
+          //   .then((json) => {
+          //   /*eslint-disable */
+          // console.log(json)
+          // if(json=='true'){
+          //     toast.success("Password Updated Successfully")
+          // }
               /* eslint-enable */
-            }).catch((error) => {
-            /*eslint-disable */
-            console.log(error)
-             /* eslint-enable */
-            })
-        }
+        //     }).catch((error) => {
+        //     /*eslint-disable */
+        //     console.log(error)
+        //      /* eslint-enable */
+        //     })
+        /*eslint-disable */
+        localStorage.setItem("Password",this.state.cnfmpassWord)
+        toast.success("Password Updated Successfully")
+         /*eslint-disable */
+        setTimeout(()=> {this.callLogin() }, 5000);
+         }else{
+           toast.error("Something Went Wrong !")
+         }
+      }
+
+      callLogin=()=>{
+        this.props.history.push("/")
       }
 
       handleUsername = (event) => {
